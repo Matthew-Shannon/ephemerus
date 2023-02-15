@@ -1,11 +1,7 @@
 import {CreateImageRequestSizeEnum} from "openai";
 
 export class Config {
-    static port = 80
-    static rootURL = 'http://143.42.136.4' //'http://192.168.0.151'
     static sampleImage = 'https://archives.bulbagarden.net/media/upload/8/8e/0137Porygon.png'
-    static chatGptApiKey = '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'
-    static dalleApiKey = 'sess-KkC5AD8ybMEsU4fxgIlYbsTKLIeF6GLUgdrv2AQS'
 
     static initialPrompt = `
         I want you to act as a text based adventure game. 

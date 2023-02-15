@@ -2,11 +2,11 @@ import { Configuration, OpenAIApi} from "openai";
 import {UseCase, VM} from "../core/types.js";
 import {Express, Request, Response} from "express";
 import {Config} from "../core/config.js";
-import {ChatGptRequest, ChatGptResponse, ChatGptService, ChatGPTServiceImpl} from "../service/chatGPTService.js";
+import {ChatGptRequest, ChatGptResponse, Chatgpt_service, ChatGptServiceImpl} from "../service/chatgpt_service.js";
 
 export class PlayUseCase implements UseCase<PlayVM> {
 
-    readonly openai = new OpenAIApi(new Configuration({apiKey:Config.chatGptApiKey}));
+    readonly openai = new OpenAIApi(new Configuration({apiKey: process.env.DALLE_KEY}));
     readonly vm = new PlayVM()
 
     onAttach(app: Express): void {
@@ -62,7 +62,7 @@ export class PlayUseCase implements UseCase<PlayVM> {
 }
 
 export class PlayVM implements VM {
-    public readonly chatGPT: ChatGptService = new ChatGPTServiceImpl()
+    public readonly chatGPT: Chatgpt_service = new ChatGptServiceImpl()
 
     readonly page_title_text = "Play"
 

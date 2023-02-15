@@ -2,12 +2,12 @@ import {ChatGPTAPI, ChatMessage, SendMessageOptions} from "chatgpt";
 import {Config} from "../core/config.js";
 import {Request} from "express";
 
-export interface ChatGptService {
+export interface Chatgpt_service {
     makeRequest(req: ChatGptRequest, onUpdate: OnUpdateCallback): Promise<ChatGptResponse>
 }
 
-export class ChatGPTServiceImpl implements ChatGptService {
-    private readonly chatGptApi = new ChatGPTAPI({apiKey: Config.chatGptApiKey});
+export class ChatGptServiceImpl implements Chatgpt_service {
+    private readonly chatGptApi = new ChatGPTAPI({apiKey: process.env.CHATGPT_KEY!!});
 
     public makeRequest(req: ChatGptRequest, onUpdate: OnUpdateCallback): Promise<ChatGptResponse> {
 

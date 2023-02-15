@@ -1,7 +1,6 @@
 import {VM} from '../core/types.js';
 import {Express, Request, Response} from "express";
 import {UseCase} from "../core/types.js";
-import {Config} from "../core/config.js";
 
 export class LandingUseCase implements UseCase<LandingVM> {
     readonly vm = new LandingVM();
@@ -36,7 +35,7 @@ export class LandingVM implements VM {
     readonly heading_text = 'Ephemeral.io'
     readonly subheading_text = 'Adventure Awaits'
 
-    readonly button_url = Config.rootURL + '/play'
+    readonly button_url = process.env.ROOT_URL + '/play'
     readonly button_text = "Play!"
 
     readonly page_title_text = "Ephemeral.io"
