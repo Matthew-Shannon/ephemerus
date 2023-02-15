@@ -44,10 +44,8 @@ export class PlayUseCase implements UseCase<PlayVM> {
 
     async processDallE(res: Response, msg: string): Promise<string> {
         res.write(`<div id="dalle_view">`)
-        res.write(`<div>`)
         res.write(`<div id="loader"></div>`)
         res.write(`<p id="loading_text">thinking...</p>`)
-        res.write(`</div>`)
 
         const imageData = await this.openai
             .createImage({prompt: msg, n: 1, size: Config.imageRes})
@@ -136,6 +134,10 @@ export class PlayVM implements VM {
             height: 4vh;
             font: 2vh Inconsolata, monospace;
             margin-top: 2vw;
+        }
+        
+        #loading_text {
+            
         }
         
         #loader {
