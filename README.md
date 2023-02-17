@@ -1,4 +1,4 @@
-# Ephemeral
+# Ephemerus
 
 Procedural generated text & image based role playing game using ChatGPT & DallE.
 
@@ -6,7 +6,7 @@ Player input -> ChatGPT (text) -> DallE (image)
 
 ## Installation
 ```bash
-git clone git@github.com:Matthew-Shannon/ephemeral.git && cd ephemeral && npm install
+git clone git@github.com:Matthew-Shannon/ephemerus.git && cd ephemerus && npm install
 
 nano .env 
 // paste config from below
