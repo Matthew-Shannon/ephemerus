@@ -14,8 +14,8 @@ app.use(BodyParser.json())
 app.use(BodyParser.urlencoded({extended: true}))
 app.use(requestLogger)
 
-const server = app.listen(config.PORT, () => {
-    console.log(`Listening @ ${config.ADDRESS}`)
+const server = app.listen(80, () => {
+    console.log(`Listening @ ${config.BASE_URL}`)
     Nav.define(config).applyRoutes(app)
 })
 

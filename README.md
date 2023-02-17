@@ -12,9 +12,11 @@ ChatGPT (text)
 Typescript Node.JS Express.JS server 
 
 ## Screenshots
-![SampleA](images/sampleA.jpg)
-![SampleB](images/sampleB.jpg)
-![SampleC](images/sampleC.jpg)
+![SampleA](images/sampleA.png)
+![SampleB](images/sampleB.png)
+![SampleC](images/sampleC.png)
+![SampleD](images/sampleD.png)
+
 
 ## Installation
 ```bash

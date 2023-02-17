@@ -3,31 +3,22 @@ import * as dotenv from "dotenv";
 
 export class Config {
     private constructor(
-        readonly PORT: number,
         readonly BASE_URL: string,
-        readonly CHATGPT_KEY: string,
-        readonly DALLE_KEY: string,
-        readonly LOGGING_FLAG: boolean,
+        readonly OPEN_AI_KEY: string,
     ) {}
 
     public static def() {
         dotenv.config() // this pulls .env into server
         return new Config(
-            Number(process.env.PORT),
-            String(process.env.ROOT_URL),
-            String(process.env.CHATGPT_KEY),
-            String(process.env.DALLE_KEY),
-            Boolean(process.env.LOGGING_FLAG),
+            String(process.env.BASE_URL),
+            String(process.env.OPEN_AI_KEY),
         )
     }
-
-
-    readonly ADDRESS: string = this.BASE_URL + ':' + this.PORT
 
     readonly APP_TITLE = 'Ephemeral.io'
 
     readonly INITIAL_ACTION =
-        'my first command is wake up in a dream world'
+        'my first command is wake up in a psychedelic dream world'
 
     readonly INITIAL_PROMPT = `
         I want you to act as a text based adventure game. 

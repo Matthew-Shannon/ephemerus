@@ -11,7 +11,7 @@ export interface ChatGptService {
 export class ChatGptServiceImpl implements ChatGptService {
     constructor(
         private readonly config: Config,
-        private readonly chatGptApi = new ChatGPTAPI({apiKey: config.CHATGPT_KEY})
+        private readonly chatGptApi = new ChatGPTAPI({apiKey: config.OPEN_AI_KEY})
     ) {}
 
     makeRequest(req: ChatGptRequest, onUpdate: (data: String) => void): Promise<ChatGptResponse> {

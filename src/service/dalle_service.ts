@@ -8,7 +8,7 @@ export interface DalleService {
 export class DalleServiceImpl implements DalleService {
     constructor(
         private readonly config: Config,
-        private readonly openAiApi = new OpenAIApi(new Configuration({apiKey: config.DALLE_KEY}))
+        private readonly openAiApi = new OpenAIApi(new Configuration({apiKey: config.OPEN_AI_KEY}))
     ) {}
 
     makeRequest(msg: string): Promise<string> {
