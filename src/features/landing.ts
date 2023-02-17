@@ -14,8 +14,8 @@ export class LandingUseCase {
     async onCall(req: Request, res: Response): Promise<void> {
         res.writeHead(200, {'Content-Type': 'text/html'})
         res.write(`
-            ${HTML.head(this.vm.title_text, this.vm.css)}
-            ${this.vm.body}
+            ${this.vm.head()}
+            ${this.vm.content}
             ${HTML.tail()}
         `)
         res.end()
@@ -33,17 +33,29 @@ export class LandingVM {
     readonly button_url = this.config.BASE_URL + '/play'
     readonly button_text = "Play!"
 
-    readonly body = `
-        <h1>${this.config.APP_TITLE}</h1>
-        <p>${this.subheading_text}</p>
-        <a href='${this.button_url}' class="hide_during_load">
-            <button onclick="showLoading()">${this.button_text}</button>
-        </a>      
-        ${HTML.spinner}
+    readonly content = `
+        <div id="content">
+            <h1>${this.config.APP_TITLE}</h1>
+            <p>${this.subheading_text}</p>
+            <a href='${this.button_url}' class="hide_during_load">
+                <button onclick="showLoading()">${this.button_text}</button>
+            </a>      
+            ${HTML.spinner}
+        </div>
     `
+
+    head = () => HTML.head(this.title_text, this.css, this.config);
 
     readonly css =`
         <style>
+            
+            #content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+        
              h1 {
                 padding: 2vh;
                 padding-top: 32vh;
@@ -52,6 +64,7 @@ export class LandingVM {
             p {
                 padding: 2vh;
             }
+            
         </style>
     `
 

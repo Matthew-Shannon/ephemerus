@@ -1,20 +1,23 @@
 import {Spinner} from "./spinner.js";
+import {Config} from "../config.js";
+import {Header} from "./header.js";
 
 export class HTML {
-    static head(title: string, css: string): string {
-        return `
-            <html lang="en">  
-                <head>
-                    <title>${title}</title>
-                    ${this.viewport}
-                    ${this.baseStyle}
-                    ${Spinner.spinnerScript}
-                    ${Spinner.spinnerStyle}
-                    ${css}
-                </head>
-                <body onload="onLoad()">
-        `
-    }
+    static head = (title: string, css: string, config: Config): string => `
+        <html lang="en">  
+            <head>
+                <title>${title}</title>
+                ${this.viewport}
+                ${this.baseStyle}
+                ${Header.headerStyle}
+                ${Spinner.spinnerScript}
+                ${Spinner.spinnerStyle}
+                ${css}
+            </head>
+            <body onload="onLoad()">
+            ${Header.headerView(config)}
+                
+    `;
 
     static tail(): string {
         return `
@@ -24,11 +27,6 @@ export class HTML {
     }
 
     static readonly spinner = Spinner.loadingView
-
-    static readonly spacer = `<div id="spacer"></div>`
-    static readonly loadingSpacer = `<div id="spacer" class="show_during_load"></div>`
-
-
 
     private static readonly viewport = `
         <meta 
@@ -60,7 +58,6 @@ export class HTML {
                 background-color: #121212;
                 display: flex;
                 flex-direction: column;
-                align-items: center;
             }
              
             h1 {
@@ -72,7 +69,7 @@ export class HTML {
                 color: #96cc8b;
                 font: 2vh "Terminal", "Courier New", monospace;
             }
-            
+
             button {
                 padding: 0.5vh;
             }
@@ -83,10 +80,6 @@ export class HTML {
             
             form {
                 padding: 1vh;
-            }
-            
-            #spacer {
-                margin: 2vh;
             }
             
         </style>

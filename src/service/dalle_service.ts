@@ -30,7 +30,7 @@ export class DalleServiceImpl implements DalleService {
 
     cleanQuery(data: string): string {
         return data.toLowerCase()
-            .replaceAll(/['`.,;:!?\n\t]|self |youre |your |you /g, '')
+            .replaceAll(/[`'"–.,;:!?\n\t]|self |youre |your |you /g, '')
             .trim()
     }
 

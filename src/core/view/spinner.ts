@@ -84,12 +84,7 @@ export class Spinner {
                     views.item(i).style.display = displayState; 
                 }
             }
-            
-            window.addEventListener('popstate', function(_) { 
-                console.log('postate')
-                window.location.href = window.location.origin 
-            }, false);
-            
+                        
         </script>
     `
 

@@ -16,9 +16,12 @@ export class Config {
     }
 
     readonly APP_TITLE = 'Ephemerus'
+    readonly APP_VERSION = '1.2.0'
+
+    readonly INPUT_HINT = "enter next action"
 
     readonly INITIAL_ACTION =
-        'my first command is wake up in an ephemeral psychedelic mystical dream world and search for an adventure'
+        'my first command is wake up in an ephemeral psychedelic medieval dream world'
 
     readonly INITIAL_PROMPT = `
         I want you to act as a text based adventure game. 

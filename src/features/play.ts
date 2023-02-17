@@ -18,14 +18,12 @@ export class PlayUseCase {
 
     async onCall(res: Response, convo: ChatGptRequest): Promise<void> {
         res.writeHead(200, {'Content-Type': 'text/html'})
-        res.write(HTML.head(this.vm.app_title, this.vm.css))
-        res.write(HTML.spacer)
+        res.write(this.vm.head() + "<div id='content'>")
 
         let chatgpt = await this.processChatGpt(res, convo)
         let dalle = await this.processDallE(res, chatgpt.reply)
         // TODO write to cookies
-        res.write(HTML.spacer)
-        res.write(HTML.tail())
+        res.write("<div/>" + HTML.tail())
         res.end()
     }
 
@@ -47,7 +45,6 @@ export class PlayUseCase {
         res.write(HTML.spinner)
 
         const imageData = await this.vm.openAI.makeRequest(msg)
-        res.write(HTML.loadingSpacer)
         res.write(`<img id="dalle_image" class="hide_during_loading" src="${imageData}" alt="todo">`)
         res.write(`</div>`)
 
@@ -67,19 +64,23 @@ export class PlayVM {
     inputSection(res: ChatGptResponse): string {
         return `
             <form id="user_input" class="hide_during_loading" action="/play" method="post" onsubmit="showLoading()">
-                <input type="text" id="abc" name="action" placeholder="type next action">
+                <input type="text" id="abc" name="action" placeholder="${this.config.INPUT_HINT}">
                 <input type="hidden" id="ghi" name="parentMessageId" value="${res.id}">
                 <input type="hidden" id="def" name="conversationId" value="${res.conversationId}">
             </form>
         `
     }
 
+    head = () => HTML.head(this.app_title, this.css, this.config);
+
     readonly css = `
         <style>
        
-            body {
+            #content {
+                display: flex;
                 justify-content: flex-end;
                 flex-direction: column-reverse;
+                align-items: center;
             }
             
             #dalle_image {
