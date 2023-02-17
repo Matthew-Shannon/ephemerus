@@ -15,10 +15,10 @@ export class Config {
         )
     }
 
-    readonly APP_TITLE = 'Ephemeral'
+    readonly APP_TITLE = 'Ephemerus'
 
     readonly INITIAL_ACTION =
-        'my first command is wake up in a psychedelic dream world'
+        'my first command is wake up in an ephemeral psychedelic mystical dream world'
 
     readonly INITIAL_PROMPT = `
         I want you to act as a text based adventure game. 
