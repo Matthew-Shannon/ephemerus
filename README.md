@@ -1,4 +1,4 @@
-# Ephemeral.io 
+# Ephemeral
 
 Procedural generated text & image based role playing game using ChatGPT & DallE.
 
