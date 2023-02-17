@@ -1,15 +1,8 @@
-# Ephemeral.io
-(text & image) based role playing game
+# Ephemeral.io 
 
-Leverages both ChatGPT and DallE to generate a (text & image) based role playing game
+Procedural generated text & image based role playing game using ChatGPT & DallE.
 
 Player input -> ChatGPT (text) -> DallE (image)
-
-DallE (image)
-
-ChatGPT (text)
-
-Typescript Node.JS Express.JS server 
 
 ## Screenshots
 ![SampleA](images/sampleA.png)
