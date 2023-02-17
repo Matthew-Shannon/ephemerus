@@ -15,10 +15,12 @@ export class Config {
         )
     }
 
-    readonly APP_TITLE = 'Ephemerus'
+    readonly APP_TITLE = 'Ephemerus.io'
     readonly APP_VERSION = '1.2.0'
 
     readonly INPUT_HINT = "enter next action"
+
+    readonly GITHUB_LINK = "https://github.com/Matthew-Shannon/ephemerus/blob/main/README.md"
 
     readonly INITIAL_ACTION =
         'my first command is wake up in an ephemeral psychedelic medieval dream world'

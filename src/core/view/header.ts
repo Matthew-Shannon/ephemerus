@@ -5,8 +5,8 @@ export class Header {
     static headerView(config: Config) {
         return `
             <div id="header">
-                <a href="${config.BASE_URL}" class="header_child">ephemerus.io</a>
-                <a href="https://github.com/Matthew-Shannon/ephemerus" class="header_child">v${config.APP_VERSION}</a>
+                <a href="${config.BASE_URL}" class="header_child">${config.APP_TITLE.toLowerCase()}</a>
+                <a href="${config.GITHUB_LINK}" class="header_child">v${config.APP_VERSION}</a>
             </div>
         `
     }
