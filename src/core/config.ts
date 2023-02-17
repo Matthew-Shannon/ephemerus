@@ -15,7 +15,7 @@ export class Config {
         )
     }
 
-    readonly APP_TITLE = 'Ephemeral.io'
+    readonly APP_TITLE = 'Ephemeral'
 
     readonly INITIAL_ACTION =
         'my first command is wake up in a psychedelic dream world'
