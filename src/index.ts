@@ -1,16 +1,25 @@
-import * as dotenv from 'dotenv'
 import Express from "express"
 import BodyParser from "body-parser"
 import Cors from "cors"
 import {Nav} from "./core/nav.js";
+import {Config} from "./core/config.js";
+import {requestLogger} from "./core/middleware.js";
 
-dotenv.config()
+const config = Config.def()
 const app = Express()
+
 app.use(Cors())
 app.use(Express.json())
 app.use(BodyParser.json())
 app.use(BodyParser.urlencoded({extended: true}))
+app.use(requestLogger)
 
-app.listen(process.env.PORT, () => console.log('Listening @ '+process.env.ROOT_URL))
+const server = app.listen(config.PORT, () => {
+    console.log(`Listening @ ${config.ADDRESS}`)
+    Nav.define(config).applyRoutes(app)
+})
 
-new Nav().applyUseCases(app)
+process.on('SIGTERM', () => {
+    console.log('SIGTERM signal received: closing server')
+    server.close(() => console.log('Server closed'))
+})
