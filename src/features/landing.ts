@@ -54,8 +54,7 @@ export class LandingVM {
                 flex-direction: column;
                 align-items: center;
             }
-            
-        
+
              h1 {
                 padding: 2vh;
                 padding-top: 32vh;
@@ -63,6 +62,11 @@ export class LandingVM {
             
             p {
                 padding: 2vh;
+            }
+            
+            button {
+                min-height: 6vh;
+                min-width: 12vh;
             }
             
         </style>

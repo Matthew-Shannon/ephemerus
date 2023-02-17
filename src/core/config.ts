@@ -16,9 +16,9 @@ export class Config {
     }
 
     readonly APP_TITLE = 'Ephemerus.io'
-    readonly APP_VERSION = '1.2.0'
+    readonly APP_VERSION = '1.3.0'
 
-    readonly INPUT_HINT = "enter next action"
+    readonly INPUT_HINT = "I want to..."
 
     readonly GITHUB_LINK = "https://github.com/Matthew-Shannon/ephemerus/blob/main/README.md"
 

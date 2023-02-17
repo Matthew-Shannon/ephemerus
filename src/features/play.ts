@@ -22,7 +22,7 @@ export class PlayUseCase {
 
         let chatgpt = await this.processChatGpt(res, convo)
         let dalle = await this.processDallE(res, chatgpt.reply)
-        // TODO write to cookies
+
         res.write("<div/>" + HTML.tail())
         res.end()
     }
@@ -45,7 +45,7 @@ export class PlayUseCase {
         res.write(HTML.spinner)
 
         const imageData = await this.vm.openAI.makeRequest(msg)
-        res.write(`<img id="dalle_image" class="hide_during_loading" src="${imageData}" alt="todo">`)
+        res.write(`<img id="dalle_image" class="hide_during_loading" src="${imageData}" onload="showPage()" alt="todo">`)
         res.write(`</div>`)
 
         return imageData
