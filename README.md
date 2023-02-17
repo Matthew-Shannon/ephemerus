@@ -6,7 +6,7 @@ Player input -> ChatGPT (text) -> DallE (image)
 
 ## Installation
 ```bash
-git clone git@github.com:Matthew-Shannon/sandbox.git && cd sandbox && npm install
+git clone git@github.com:Matthew-Shannon/ephemeral.git && cd ephemeral && npm install
 
 nano .env 
 // paste config from below
