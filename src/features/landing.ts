@@ -6,12 +6,14 @@ export class LandingUseCase {
     constructor(private readonly vm: LandingVM) {}
 
     onAttach(app: Express): void {
+        console.log("LandingUseCase onAttach")
         app.get('/', async (req: Request, res: Response, next) =>
             await this.onCall(req, res).catch(err => next(err))
         )
     }
 
     async onCall(req: Request, res: Response): Promise<void> {
+        console.log("LandingUseCase onCall")
         res.writeHead(200, {'Content-Type': 'text/html'})
         res.write(`
             ${this.vm.head()}

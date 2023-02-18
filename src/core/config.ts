@@ -15,8 +15,15 @@ export class Config {
         )
     }
 
+    public static mock() {
+        return new Config(
+            String("http://localhost"),
+            String(""),
+        )
+    }
+
     readonly APP_TITLE = 'Ephemerus.io'
-    readonly APP_VERSION = '1.3.0'
+    readonly APP_VERSION = '1.4.0'
 
     readonly INPUT_HINT = "I want to..."
 
@@ -34,11 +41,11 @@ export class Config {
         when i need to tell you something in english, i will do so by putting text inside curly brackets {like this}.`;
 
     readonly OFFLINE_PROMPT =
-        `You wake up in a small, dimly lit room. You see a door to your left and a window to your right. {What do you want to do?}`
-
+        `You awaken in a strange and dreamlike world. The sky is painted with swirls of color, and the landscape is lush with vibrant greenery. Trees are twisted and distorted into strange shapes, and their trunks are scorched with arcane symbols. Ahead of you lies an ancient castle, its towers reaching up to the heavens.`
 
     readonly OFFLINE_IMAGE =
-        "https://openailabsprodscus.blob.core.windows.net/private/user-3gfu9OJlOkFdTwUAqxKUzXCE/generations/generation-1zPU9amiR5rJz8P9O2jOqH5s/image.webp?st=2023-02-08T02%3A16%3A40Z&se=2023-02-08T04%3A14%3A40Z&sp=r&sv=2021-08-06&sr=b&rscd=inline&rsct=image/webp&skoid=15f0b47b-a152-4599-9e98-9cb4a58269f8&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2023-02-08T00%3A57%3A15Z&ske=2023-02-15T00%3A57%3A15Z&sks=b&skv=2021-08-06&sig=GlQA4S2ndJbXsSR8e%2BmQIfLDKbQt5uUa1qqY3TFEe/8%3D"
+        "https://umbra.nascom.nasa.gov/eit/images/eclipse/eit_20010621_1730_171_half.gif"
+
 
     readonly SAMPLE_IMAGE =
         'https://archives.bulbagarden.net/media/upload/8/8e/0137Porygon.png'
