@@ -17,16 +17,17 @@ OPEN_AI_KEY="paste key here"
 ## How to Use?
 Development setup
 ```bash
-npm run dev
+npm run develop
 ``` 
-Server deploymemt
+Server deployment
 ```bash
-npm run build && npm run start
+npm run server
 ```
 
 ## Screenshots
 
-
+"server": "npx tsc && node dist/index.js",
+"develop": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
 
 
 <div style="display:flex">
