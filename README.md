@@ -12,7 +12,7 @@ git clone https://github.com/Matthew-Shannon/ephemerus.git && cd ephemerus
 
 ### Install depenencies
 ```bash
-npm --prefix client install && npm --prefix server install
+npm install concurrently && npm --prefix client install && npm --prefix server install
 ```
 
 ### Setup Client Env
@@ -36,7 +36,7 @@ OPEN_AI_KEY="api key goes here"
 
 ## How to Use?
 ```bash
-npm run start
+sudo npm --prefix server run start
 ``` 
 
 ## Contribute
