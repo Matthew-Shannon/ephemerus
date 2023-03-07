@@ -12,7 +12,7 @@ git clone https://github.com/Matthew-Shannon/ephemerus.git && cd ephemerus
 
 ### Install dependencies
 ```bash
-npm i -g concurrently && npm --prefix client install && npm --prefix server install
+npm i -g concurrently && npm i -g react-scripts && npm --prefix client install && npm --prefix server install
 ```
 
 ### Setup Client Env
