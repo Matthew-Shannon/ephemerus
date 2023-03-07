@@ -1,17 +1,23 @@
 # Ephemerus
 
-Procedural generated text & image based role playing game using ChatGPT & DallE.
+Procedural generated text & image based role playing game using ChatGPT & DallE. 
 
-Player input -> ChatGPT (text) -> DallE (image)
+Player input -> ChatGPT(text) -> DallE(image). 
 
-### Setup OpenAI Key
-https://elephas.app/blog/how-to-create-openai-api-keys-cl5c4f21d281431po7k8fgyol0
-Copy newly created API key somewhere safe. 
+React.js frontend & Node.js Express backend (100% Typescript & Html/Css). 
+
 
 ## Installation
 ### Clone repo
 ```bash
 git clone https://github.com/Matthew-Shannon/ephemerus.git && cd ephemerus
+```
+
+### Setup OpenAI Key
+```bash
+https://elephas.app/blog/how-to-create-openai-api-keys-cl5c4f21d281431po7k8fgyol0
+
+Copy newly created API key somewhere safe. 
 ```
 
 ### Install dependencies
