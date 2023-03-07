@@ -10,9 +10,9 @@ Player input -> ChatGPT (text) -> DallE (image)
 git clone https://github.com/Matthew-Shannon/ephemerus.git && cd ephemerus
 ```
 
-### Install depenencies
+### Install dependencies
 ```bash
-npm --prefix client install && npm --prefix server install
+npm i -g concurrently && npm --prefix client install && npm --prefix server install
 ```
 
 ### Setup Client Env
