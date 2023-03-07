@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Ephemeral.io</title>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, minimum-scale=1, maximum-scale=1"/>
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app"/>
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+  <style>
+
+    * {
+      margin: 0;
+      padding: 1vmax;
+      border: 0;
+    }
+
+    html, body, #root, .maxed {
+      width: 100vw;
+      height: 100vh;
+      padding: 0 !important;
+      color: #96cc8b;
+      background: #121212;
+    }
+
+    html * {
+      font-size: 16px;
+      line-height: 1.2;
+      font-family: 'SF Mono', SFMono-Regular, ui-monospace, 'DejaVu Sans Mono', Menlo, Consolas, monospace;
+    }
+
+    #flex_column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @-webkit-keyframes spin {
+      0% { -webkit-transform: rotate(0deg); }
+      100% { -webkit-transform: rotate(360deg); }
+    }
+
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+  </style>
+</head>
+<body>
+<noscript>You need to enable JavaScript to run this app.</noscript>
+<div id="root" class="maxed"></div>
+</body>
+</html>
