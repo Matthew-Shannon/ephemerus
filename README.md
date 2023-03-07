@@ -8,16 +8,17 @@ React.js frontend & Node.js Express backend (100% Typescript & Html/Css).
 
 
 ## Installation
-### Clone repo
-```bash
-git clone https://github.com/Matthew-Shannon/ephemerus.git && cd ephemerus
-```
 
 ### Setup OpenAI Key
 ```bash
 https://elephas.app/blog/how-to-create-openai-api-keys-cl5c4f21d281431po7k8fgyol0
 
 Copy newly created API key somewhere safe. 
+```
+
+### Clone repo
+```bash
+git clone https://github.com/Matthew-Shannon/ephemerus.git && cd ephemerus
 ```
 
 ### Install dependencies
