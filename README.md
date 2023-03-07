@@ -8,33 +8,21 @@ Player input -> ChatGPT (text) -> DallE (image)
 ```bash
 git clone https://github.com/Matthew-Shannon/ephemerus.git && cd ephemerus
 
-npm --prefix ../client install 
-nano ../client/.env
+npm --prefix client install && npm --prefix server install
 
+nano ./client/.env
+REACT_APP_BASE_URL="http://localhost"
+PORT=80
 
-cd server && npm install && cd ..
-
-nano .env 
-// paste config from below
-BASE_URL="paste your ip here"
-OPEN_AI_KEY="paste key here"
-```
+nano ./server/.env
+BASE_URL="http://localhost"
+OPEN_AI_KEY="api key goes here"
 
 ## How to Use?
 Development setup
 ```bash
-npm run develop
+npm run start
 ``` 
-Server deployment
-```bash
-npm run server
-```
-
-## Screenshots
-
-"server": "npx tsc && node dist/index.js",
-"develop": "concurrently \"npx tsc --watch\" \"nodemon -q dist/index.js\""
-
 
 ## Contribute
 mshannon93@gmail.com
