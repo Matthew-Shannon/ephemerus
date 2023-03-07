@@ -4,6 +4,10 @@ Procedural generated text & image based role playing game using ChatGPT & DallE.
 
 Player input -> ChatGPT (text) -> DallE (image)
 
+### Setup OpenAI Key
+https://elephas.app/blog/how-to-create-openai-api-keys-cl5c4f21d281431po7k8fgyol0
+Copy newly created API key somewhere safe. 
+
 ## Installation
 ### Clone repo
 ```bash
