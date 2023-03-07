@@ -8,7 +8,7 @@
   "exports": {},
   "scripts": {
     "make": "./node_modules/.bin/tsc && node build/index.js",
-    "start": "sudo concurrently \"npm run make\" \"cd ../client && npm run make\""
+    "start": "sudo ./node_modules/concurrently \"npm run make\" \"cd ../client && npm run make\""
   },
   "devDependencies": {
     "@tsconfig/node18": "^1.0.1",
